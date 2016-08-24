@@ -41,7 +41,6 @@ public class MyClassTest {
 		
 	}
 	
-	
 	@Rule
 	public ExpectedException exception = ExpectedException.none();
 	
@@ -56,4 +55,12 @@ public class MyClassTest {
 		assertEquals("100 / 0 = Exception!", 10, answer, 0);
 	}
 	
+	
+
+	@Test
+	public void testLog10(){
+
+		assertEquals("log(100", 2.0, Math.log10(100), 1);
+		
+	}
 }
