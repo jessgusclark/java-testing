@@ -6,9 +6,17 @@ public class MyClass {
 		System.out.print("MyClass Constructor!");
 	}
 	
-	public int multiply(int x1, int x2){
+	public double multiply(double x1, double d){
 		
-		return x1*x2;
+		return x1*d;
+	}
+
+	public int subtract(int i, int j) {
+		return i-j;
+	}
+
+	public Object add(int i, int j) {
+		return i + j;
 	}
 	
 }
