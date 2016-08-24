@@ -18,5 +18,10 @@ public class MyClass {
 	public Object add(int i, int j) {
 		return i + j;
 	}
+
+	public double divide(int i, int j) {
+		// TODO Auto-generated method stub
+		return i/j;
+	}
 	
 }
