@@ -4,7 +4,7 @@ public class MyClass {
 
 	//Constructor:
 	public MyClass(){
-		System.out.print("MyClass Constructor!");
+		System.out.println("MyClass Constructor!");
 	}
 	
 	public double multiply(double x1, double d){

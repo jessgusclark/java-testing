@@ -8,11 +8,14 @@ import org.junit.rules.ExpectedException;
 
 public class MyClassTest {
 	
+	MyClass mc = new MyClass();
+	
+	
 	@Test
 	public void testMultiply() {
 		//fail("Not yet implemented");
 		
-		MyClass mc = new MyClass();
+		
 		
 		assertEquals("10 x 10 = 100", 100, 10*10);
 		//assertEquals("100 x 1 = 100", 100.0, mc.multiply(100, 1));
@@ -28,7 +31,6 @@ public class MyClassTest {
 
 	@Test
 	public void testSubtract(){
-		MyClass mc = new MyClass();
 		
 		assertEquals("100 - 50 = 50", 50, mc.subtract(100, 50));
 		
@@ -36,7 +38,6 @@ public class MyClassTest {
 	
 	@Test
 	public void testAdd(){
-		MyClass mc = new MyClass();
 		
 		assertEquals("10 + 10 = 20", 20, mc.add(10,10));
 		
@@ -49,7 +50,6 @@ public class MyClassTest {
 	public void throwsException(){
 		exception.expect(ArithmeticException.class);
 		
-		MyClass mc = new MyClass();
 		
 		double answer = mc.divide(100, 0);
 		
