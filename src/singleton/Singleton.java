@@ -2,25 +2,17 @@ package singleton;
 
 public class Singleton {
 	
-	private Singleton instance;
+	private static Singleton instance = new Singleton();
 	
-	/*
-	public Singleton Singleton(){
-		if (instance == null){
-			instance = new Singleton();
-		}
+	private Singleton(){}
+	
+	public static Singleton getInstance(){
 		return instance;
 	}
-	*/
 	
-	public Singleton Singleton(){
-		if (instance == null){
-			System.out.println("Creating New Instance");
-			instance = new Singleton();
-		}else{
-			System.out.println("Instance has already been created");
-		}
-		return instance;
+	public void showMessage(){
+		System.out.println("Hello World!");
 	}
+	
 	
 }
