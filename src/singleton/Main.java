@@ -2,7 +2,10 @@ package singleton;
 
 public class Main {
 	
-	Singleton s = new Singleton();
-	
+	public static void main(String[] args){
+		System.out.println("Singleton Design Pattern Example");
+		Singleton s = new Singleton();
+		
+	}
 	
 }
