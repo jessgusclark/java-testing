@@ -3,6 +3,7 @@ package exception;
 public class Person {
 	
 	private String firstName;
+	private boolean happy = true;
 	private static int tooHot = 85;
 	private static int tooCold = 65;
 	
@@ -24,12 +25,18 @@ public class Person {
 		
 		int temperature = coffee.getTemperature();
 		if (temperature <= tooCold){
+			happy = false;
 			throw new TooColdException(temperature);
 		}
 		else if (temperature >= tooHot){
+			happy = false;
 			throw new TooHotException(temperature);
 		}
 		
+	}
+
+	public Boolean getHappy() {
+		return happy;
 	}
 	
 }

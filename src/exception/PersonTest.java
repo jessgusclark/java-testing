@@ -43,4 +43,19 @@ public class PersonTest {
 		
 	}
 	
+	@Test
+	public void getCustomerMood(){	
+		assertTrue(jesse.getHappy());
+	}
+	
+	@Test(expected=TemperatureException.class)
+	public void testUnhappyCustomer() throws Exception{
+		CoffeeCup coldCoffee = new CoffeeCup();
+		coldCoffee.setTemperature(50);
+		
+		jesse.drinkCoffee(coldCoffee);
+		
+		assertFalse(jesse.getHappy());
+	}
+	
 }
