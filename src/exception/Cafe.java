@@ -7,17 +7,29 @@ public class Cafe {
 		try{
 			customer.drinkCoffee(coffee);
 			System.out.println("Customer Drank Coffee");
-		}catch(TemperatureException e){
-			System.out.println("Coffee was the wrong temperature!");
 		}
-		/*
-		 * Unreachable:
 		catch(TooHotException e){
-			System.out.println("Coffee was too hot!" );
-		}catch(TooColdException e){
-			System.out.println("Coffee was too cold!" );
+			int temperature = e.getTemperature();
+            System.out.println("Coffee temperature is "
+                + temperature + " degrees Celsius.");
+            
+            if (temperature < 100){
+            		System.out.println("Ask customer to wait for it to cool down");
+            }else{
+            		System.out.println("Make new cup of coffee for customer");
+            }
 		}
-		*/
+		catch(TooColdException e){
+			int temperature = e.getTemperature();
+			System.out.println("Coffee temperature is "
+	                + temperature + " degrees Celsius.");
+			
+			if (temperature > 50){
+				System.out.println("Add hot coffee to drink");
+			}else{
+				System.out.println("Make new cup of coffee for customer");
+			}
+		}
 		
 	}
 }

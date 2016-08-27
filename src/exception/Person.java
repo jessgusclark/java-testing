@@ -24,10 +24,10 @@ public class Person {
 		
 		int temperature = coffee.getTemperature();
 		if (temperature <= tooCold){
-			throw new TooColdException();
+			throw new TooColdException(temperature);
 		}
 		else if (temperature >= tooHot){
-			throw new TooHotException();
+			throw new TooHotException(temperature);
 		}
 		
 	}
