@@ -28,8 +28,6 @@ public class Person {
 		}
 		else if (temperature >= tooHot){
 			throw new TooHotException();
-		}else{
-			System.out.println("Coffee is just right!");
 		}
 		
 	}
