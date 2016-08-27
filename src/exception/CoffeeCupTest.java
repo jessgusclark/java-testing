@@ -23,4 +23,17 @@ public class CoffeeCupTest {
 		assertEquals(coffee.getTemperature(), 95);
 	}
 
+	@Test 
+	public void coldCoffee(){
+		CoffeeCup coffee = new CoffeeCup(50);
+		
+		assertEquals(coffee.getTemperature(), 50);
+	}
+	
+	@Test 
+	public void hotCoffee(){
+		CoffeeCup coffee = new CoffeeCup(90);
+		
+		assertEquals(coffee.getTemperature(), 90);
+	}
 }

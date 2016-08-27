@@ -9,8 +9,11 @@ public class Main {
 		Person jesse = new Person("Jesse");
 		
 		CoffeeCup coffee = new CoffeeCup();
-		coffee.setTemperature(69);
+		CoffeeCup coldCoffee = new CoffeeCup(50);
+		CoffeeCup hotCoffee = new CoffeeCup(90);
 		
+		cafe.serveCustomer(hotCoffee, jesse);
+		cafe.serveCustomer(coldCoffee, jesse);
 		cafe.serveCustomer(coffee, jesse);
 		
 	}
