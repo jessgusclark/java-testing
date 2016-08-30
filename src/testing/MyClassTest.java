@@ -1,6 +1,8 @@
 package testing;
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -37,7 +39,7 @@ public class MyClassTest {
 	}
 	
 	@Test
-	public void testAdd(){
+	public void testAdd2(){
 		
 		assertEquals("10 + 10 = 20", 20, mc.add(10,10));
 		
@@ -64,4 +66,40 @@ public class MyClassTest {
 		assertEquals("log(100", 2.0, Math.log10(100), 1);
 		
 	}
+	
+	//@BeforeClass and @AfterClass
+	
+	@Before
+	public void runBeforeEachTest(){
+		System.out.println("Before!");
+	}
+	
+	@After
+	public void runAfterEachTest(){
+		System.out.println("After");
+	}
+	
+	// FROM CLASS - 24:00min or so:
+	private MyClass calc;
+	@Test
+	public void testAdd(){
+		calc = new MyClass();
+		assertEquals(5, calc.add(2, 3));
+	}
+	
+	@Test
+	public void testDivideByZero(){
+		try{
+			int number= 15 / 0;
+			fail("Fail");
+		}catch(ArithmeticException e){
+			//passes because Arithmetic Exception was called.
+		}
+	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void testDivideByZeroTwo(){
+		int number= 15 / 0;
+	}
+	
 }
